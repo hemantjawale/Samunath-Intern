@@ -1,16 +1,43 @@
-# React + Vite
+# Samunath Intern Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a basic landing page built with React + Vite, including Login and Signup routes.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live demo here: [https://samunath-intern.onrender.com/](https://samunath-intern.onrender.com/)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Landing Page**: Welcome screen with navigation.
+- **Login Page**: Basic login form.
+- **Signup Page**: Basic signup form.
+- **Routing**: Client-side routing using `react-router-dom`.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js installed on your machine.
+
+### Installation
+
+1. Clone the repository (or download the source).
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## Built With
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/)
