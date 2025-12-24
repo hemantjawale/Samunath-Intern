@@ -9,87 +9,56 @@ const SignupPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle signup logic here
+    // Yahan signup logic handle karo
     console.log('Signup:', { name, email, password });
     alert('Signup functionality would happen here!');
     navigate('/login');
   };
 
   return (
-    <div style={styles.container}>
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <div style={styles.inputGroup}>
-          <label>Name:</label>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <h2 className="text-3xl font-bold mb-6">Sign Up</h2>
+      <form onSubmit={handleSubmit} className="flex flex-col w-80 p-6 bg-white dark:bg-gray-800 rounded shadow-md">
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1">Name:</label>
           <input 
             type="text" 
             value={name} 
             onChange={(e) => setName(e.target.value)} 
             required 
-            style={styles.input}
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
           />
         </div>
-        <div style={styles.inputGroup}>
-          <label>Email:</label>
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1">Email:</label>
           <input 
             type="email" 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
             required 
-            style={styles.input}
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
           />
         </div>
-        <div style={styles.inputGroup}>
-          <label>Password:</label>
+        <div className="mb-6">
+          <label className="block text-sm font-medium mb-1">Password:</label>
           <input 
             type="password" 
             value={password} 
             onChange={(e) => setPassword(e.target.value)} 
             required 
-            style={styles.input}
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
           />
         </div>
-        <button type="submit" style={styles.button}>Sign Up</button>
+        <button type="submit" className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition cursor-pointer">
+          Sign Up
+        </button>
       </form>
-      <p>
-        Already have an account? <Link to="/login">Login</Link>
+      <p className="mt-4">
+        Already have an account? <Link to="/login" className="text-blue-500 hover:underline">Login</Link>
       </p>
-      <Link to="/">Back to Home</Link>
+      <Link to="/" className="mt-2 text-gray-500 hover:underline">Back to Home</Link>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '300px',
-    marginBottom: '20px',
-  },
-  inputGroup: {
-    marginBottom: '15px',
-  },
-  input: {
-    width: '100%',
-    padding: '8px',
-    marginTop: '5px',
-    boxSizing: 'border-box',
-  },
-  button: {
-    padding: '10px',
-    backgroundColor: '#007BFF',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-  }
 };
 
 export default SignupPage;

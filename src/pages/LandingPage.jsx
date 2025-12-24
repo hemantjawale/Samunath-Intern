@@ -3,37 +3,19 @@ import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
-    <div style={styles.container}>
-      <h1>Welcome to Our Landing Page</h1>
-      <p>This is a basic landing page built with React + Vite.</p>
-      <div style={styles.links}>
-        <Link to="/login" style={styles.button}>Login</Link>
-        <Link to="/signup" style={styles.button}>Signup</Link>
+    <div className="flex flex-col items-center justify-center h-screen text-center">
+      <h1 className="text-4xl font-bold mb-4">Welcome to Our Landing Page</h1>
+      <p className="text-lg mb-6">This is a basic landing page built with React + Vite.</p>
+      <div className="flex space-x-4">
+        <Link to="/login" className="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+          Login
+        </Link>
+        <Link to="/signup" className="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+          Signup
+        </Link>
       </div>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    textAlign: 'center',
-  },
-  links: {
-    marginTop: '20px',
-  },
-  button: {
-    margin: '0 10px',
-    padding: '10px 20px',
-    backgroundColor: '#007BFF',
-    color: '#fff',
-    textDecoration: 'none',
-    borderRadius: '5px',
-  }
 };
 
 export default LandingPage;
